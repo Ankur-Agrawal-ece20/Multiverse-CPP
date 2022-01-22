@@ -9,8 +9,8 @@ test:
 FILE=output.txt
 VARIABLE=`cat $(FILE)`
 check:
-    ifneq (,$(findstring  "SUCCESS", $(VARIABLE)) )
-        $(error Few Test Cases Failed)
+    ifneq (,$(findstring  SUCCESS, $(VARIABLE)) )
+        $(error Few Test Cases Failed $(VARIABLE))
     endif
 
 clean:
