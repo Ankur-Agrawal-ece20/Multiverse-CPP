@@ -1,12 +1,10 @@
 all:
 	g++ -std=c++17 file.cpp -o file
 
-.PHONY: check
-check:
+test:
 	chmod +x file
-	VARIABLE = $(shell echo $("./file"))
-    ifneq (,$(findstring  SUCCESS, $(VARIABLE)) )
-        $(error Few Test Cases Failed  $(shell echo $("./file")))
+    ifeq (,$(findstring SUCCESS!, $(shell ./file)))
+        $(error $(shell ./file)))
     endif
 
 clean:
