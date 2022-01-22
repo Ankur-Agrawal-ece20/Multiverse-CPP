@@ -1,7 +1,7 @@
 all:
 	g++ -std=c++17 file.cpp -o file
 
-VARIABLE=""
+# VARIABLE=""
 test:
 	chmod +x file
 	VARIABLE = $(shell echo $("./file"))
