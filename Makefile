@@ -7,10 +7,10 @@ test:
 
 .PHONY: check
 check:
-    if [ grep -Fxq "FAILURE" output.txt ]; then \
-        echo "Few Test Cases Failed"; \
-        exit 1; \
-    fi
+    ifeq ( $(grep  "SUCCESS" output.txt), "" )
+        $(echo "Few Test Cases Failed")
+        $(exit 1)
+    endif
 
 clean:
 	$(RM) file output.txt
