@@ -4,7 +4,7 @@ all:
 VARIABLE=""
 test:
 	chmod +x file
-	./file > $(VARIABLE)
+	VARIABLE = $(shell echo $("./file"))
 
 .PHONY: check
 check:
