@@ -29,9 +29,10 @@ cd Polygot-CPP
 ### Thats it!
 
 Go through the tasks in src folder and
-<div>
+
 <img align="left"  alt="Enjoy coding" width="500px" src="images/meme1.jpg" />
-</div>
+<br />
+    
 Then you can finally test the code using this command.
 ```
 make
