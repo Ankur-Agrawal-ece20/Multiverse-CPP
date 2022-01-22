@@ -6,8 +6,10 @@ test:
 	./file > output.txt
 
 .PHONY: check
+FILE=output.txt
+VARIABLE=`cat $(FILE)`
 check:
-    ifeq ( $(grep  "SUCCESS" output.txt), "" )
+    ifneq (,$(findstring  "SUCCESS", $(VARIABLE)) )
         $(error Few Test Cases Failed)
     endif
 
