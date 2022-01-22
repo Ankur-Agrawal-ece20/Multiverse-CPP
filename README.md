@@ -36,7 +36,6 @@ Then you can finally test the code using this command.
 ```
 make
 ```
-<br />
 ## Want to know about docktest? See this example
 
 Suppose we have a ```factorial()``` function that we want to test:
