@@ -12,7 +12,7 @@ A complete compiling example with a self-registering test looks like this:
 
 ```c++
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "test/doctest.h"
 
 int factorial(int number) { return number <= 1 ? number : factorial(number - 1) * number; }
 
