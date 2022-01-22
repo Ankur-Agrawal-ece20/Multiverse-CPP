@@ -46,7 +46,6 @@ make
 * Make a pull request to our repository, stating the tasks which you have completed.
 * Let us review your pull request.
 
-<br/>
 <hr>
 <br/>
 
