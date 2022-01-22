@@ -39,7 +39,14 @@ Then you can finally test the code using this command.
 make
 ```
 
-## Want to know about docktest? See this example
+## Submission
+* Follow the instructions to setup this project.
+* Complete the task by making the required changes in the files.
+* When done, commit your work locally and push it to your origin (forked repository).
+* Make a pull request to our repository, stating the tasks which you have completed.
+* Let us review your pull request.
+
+## Want to know about doctest? See this example
 
 Suppose we have a ```factorial()``` function that we want to test:
 
