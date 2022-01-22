@@ -3,6 +3,7 @@ all:
 
 test:
 	chmod +x file
+	./file
     ifeq (,$(findstring SUCCESS!, $(shell ./file)))
         $(error $(shell ./file)))
     endif
