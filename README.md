@@ -31,13 +31,12 @@ cd Polygot-CPP
 Go through the tasks in src folder and
 
 <img align="left"  alt="Enjoy coding" width="500px" src="images/meme1.jpg" />
-<br />
     
 Then you can finally test the code using this command.
 ```
 make
 ```
-
+<br />
 ## Want to know about docktest? See this example
 
 Suppose we have a ```factorial()``` function that we want to test:
