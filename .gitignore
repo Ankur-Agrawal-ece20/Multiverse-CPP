@@ -1,3 +1,7 @@
+### folder ###
+build/
+
 ### file ###
 file
+runner
 output.txt
