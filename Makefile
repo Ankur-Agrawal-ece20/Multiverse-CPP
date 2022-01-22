@@ -6,4 +6,4 @@ test:
 	./file
 
 clean:
-	$(RM) hello helloTest
+	$(RM) file
