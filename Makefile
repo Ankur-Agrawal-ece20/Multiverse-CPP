@@ -8,8 +8,8 @@ test:
 .PHONY: check
 check:
     ifeq ( $(grep  "SUCCESS" output.txt), "" )
-        $(echo "Few Test Cases Failed")
-        $(exit 1)
+        echo "Few Test Cases Failed"
+        exit 1
     endif
 
 clean:
