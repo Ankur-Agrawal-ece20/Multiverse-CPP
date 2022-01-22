@@ -1,6 +1,43 @@
 # Polygot-C++
 
-## A simple example
+## Introduction
+
+In this task you will be working on a c++ file and code it according to given task. The main motive of this task is to make you familiar with:
+
+- Git and GitHub
+- C++
+- Standard Template Library (STL)
+
+## Setting up the project
+
+Follow the following steps to setup this project.
+
+### Fork this repository
+First of all, click on the top-right corner of this repository to fork it.
+
+### Create a local clone of your fork
+Then, clone your forked repository using this command:
+```
+git clone https://github.com/YOUR-USERNAME/Polygot-CPP.git
+```
+
+Change your current directory to the repo's root.
+```
+cd Polygot-CPP
+```
+
+### Thats it!
+
+Go through the tasks in src folder and
+
+<img align="left"  alt="Enjoy coding" width="500px" src="images/meme1.jpg" />
+
+Then you can finally test the code using this command.
+```
+make
+```
+
+## Want to know about docktest? See this example
 
 Suppose we have a ```factorial()``` function that we want to test:
 
