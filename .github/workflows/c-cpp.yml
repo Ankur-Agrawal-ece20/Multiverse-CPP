@@ -19,7 +19,3 @@ jobs:
         platform: x64
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
