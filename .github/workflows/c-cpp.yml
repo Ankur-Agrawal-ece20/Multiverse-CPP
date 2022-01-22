@@ -12,8 +12,7 @@ strategy:
 
 jobs:
   build:
-
-        name: ${{ matrix.config.name }}
+    name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }} # будет запускаться по очереди на всех типах машин
     strategy:
       fail-fast: false
