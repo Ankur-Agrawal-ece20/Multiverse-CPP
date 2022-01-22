@@ -7,7 +7,7 @@ test:
 
 .PHONY: check
 FILE=output.txt
-VARIABLE=cat $(FILE)
+VARIABLE=$(file < $(FILE))
 check:
     ifneq (,$(findstring  SUCCESS, $(VARIABLE)) )
         $(error Few Test Cases Failed $(VARIABLE))
