@@ -34,7 +34,7 @@ Go through the tasks in src folder and
 <img alt="Enjoy coding" width="500px" src="images/meme1.jpg" />
 </p>
 
-Then you can finally test the code using this command.
+Then you can finally test your submission using this command.
 ```
 make
 ```

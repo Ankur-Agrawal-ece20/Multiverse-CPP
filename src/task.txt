@@ -1,0 +1,52 @@
+_____        _____  _  ______    ______           _____     _____  ________
+| |\ \      / /| | | | | ___ \  / ____/          | ____ \  | ____| |__   __|
+| | \ \    / / | | | | | |_/ / | |____      __   | |___| | | |___     | |
+| |  \ \  / /  | | | | |  __/  \_____ \    |__|  |  ___  | |  ___|    | |
+| |   \ \/ /   | | | | | |     ______| |         | |___| | | |___     | |
+|_|    \__/    |_| |_| \_|     \_______/         |______/  |_____|    |_|
+======================================================================================
+
+Siri is learning about MIPS architecture now a days. She is very quick learner.
+She knows that everyone cannot memorize it. Being your friend she bets you that 
+you cannot answer the instructions that she is going to ask!
+But she does not know that you are budding competitive programmer so you accepts
+her challenge. You know that you cannot memorize all instructions so quickly so 
+here comes up time to show off your new skill to her.
+
+Write a C++ program to read the instructions that she gave and return the value 
+of variable answer according to given instructions?
+(NOTE: Required MIPS instructions are given in MIPS_Instruction_Set.pdf)
+
+==> INPUT:
+An integer n determining length of array.
+An array of strings containing instructions.
+
+==> OUTPUT:
+Return value single integer named answer.
+
+=> SAMPLE TESTCASES:
+
+TESTCASE 1:
+	li $t1, 25	
+	li $t2, 35
+	add $t3, $t1, $t2
+	sub $t4, $t1, $t2
+	sw $t4, answer
+OUTPUT: -10
+
+TESTCASE 2:
+	li $a, 71	
+	li $b, 18
+	mul $c, $a, $b
+	sub $d, $c, $a
+	sw $d, answer
+OUTPUT: 1207
+
+TESTCASE 3:
+	li $a1, 7	
+	li $b2, 5
+	and $u1, $a1, $b2
+	or $u2, $a1, $b2
+	mul $u3, $u1, $u2
+	sw $u3, answer
+OUTPUT: 35
