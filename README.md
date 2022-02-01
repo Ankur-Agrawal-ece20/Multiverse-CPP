@@ -1,6 +1,6 @@
-# Welcome to
+## Welcome to
 <p align="center">
-<img alt="MULTIVERSE OF LANGUAGES" width="500px" src="images/text.png" />
+<img alt="MULTIVERSE OF LANGUAGES" width="700px" src="images/text.png" />
 </p>
 
 ## Introduction
