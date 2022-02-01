@@ -1,4 +1,7 @@
-# Polygot-C++
+# Welcome to
+<p align="center">
+<img alt="MULTIVERSE OF LANGUAGES" width="500px" src="images/text.png" />
+</p>
 
 ## Introduction
 
@@ -23,7 +26,7 @@ git clone https://github.com/YOUR-USERNAME/Polygot-CPP.git
 
 Change your current directory to the repo's root.
 ```
-cd Polygot-CPP
+cd Multiverse-CPP
 ```
 
 ### Thats it!

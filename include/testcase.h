@@ -71,6 +71,15 @@ vector<string> testcase9{
 	"ori $d, $c, 5",
 	"sw $d, answer"
 };
+vector<string> testcase10{
+	"li $x, 811",
+	"li $y, 97",
+	"mul $u3, $x, $y",
+	"mul $x, $u3, $y",
+	"sub $y, $u3, $y",
+	"or $z, $x, $y",
+	"sw $z, answer",
+};
 TEST_CASE("Testing your code") {
 	CHECK(solve(testcase1.size(), testcase1) == -10);
 	CHECK(solve(testcase2.size(), testcase2) == 1207);
@@ -81,4 +90,5 @@ TEST_CASE("Testing your code") {
 	CHECK(solve(testcase7.size(), testcase7) == 2);
 	CHECK(solve(testcase8.size(), testcase8) == 23);
 	CHECK(solve(testcase9.size(), testcase9) == -99);
+    CHECK(solve(testcase10.size(),testcase10) == 7700459);
 }
