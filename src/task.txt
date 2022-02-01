@@ -6,15 +6,15 @@ _____        _____  _  ______    ______           _____     _____  ________
 |_|    \__/    |_| |_| \_|     \_______/         |______/  |_____|    |_|
 ======================================================================================
 
-Siri is learning about MIPS architecture now a days. She is very quick learner.
+Siri is learning about MIPS architecture now a days. She is a very quick learner.
 She knows that everyone cannot memorize it. Being your friend she bets you that 
 you cannot answer the instructions that she is going to ask!
-But she does not know that you are budding competitive programmer so you accepts
+But she does not know that you are a budding competitive programmer so you accept
 her challenge. You know that you cannot memorize all instructions so quickly so 
-here comes up time to show off your new skill to her.
+here comes the time to show off your new skill to her.
 
 Write a C++ program to read the instructions that she gave and return the value 
-of variable answer according to given instructions?
+of variable answer according to given instructions.
 (NOTE: Required MIPS instructions are given in MIPS_Instruction_Set.pdf)
 
 ==> INPUT:
