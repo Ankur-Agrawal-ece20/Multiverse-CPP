@@ -1,0 +1,20 @@
+___  ________ _____ _____ _____ _   _ _____        ___________ _____  ___ _____ 
+|  \/  |_   _/  ___/  ___|_   _| \ | |  __ \   	   |_   _| ___ \  ___|/ _ \_   _|
+| .  . | | | \ `--.\ `--.  | | |  \| | |  \/ ______  | | | |_/ / |__ / /_\ \| |  
+| |\/| | | |  `--. \`--. \ | | | . ` | | _  |______| | | |    /|  __||  _  || |  
+| |  | |_| |_/\__/ /\__/ /_| |_| |\  | |_\ \   	     | | | |\ \| |___| | | || |  
+\_|  |_/\___/\____/\____/ \___/\_| \_/\____/   	     \_/ \_| \_\____/\_| |_/\_/  
+=================================================================================
+
+Congo, you won!!! 
+
+Siri is impressed by coding skills.
+One day Siri's friend Alexa stucks into a problem while handling files. 
+She saved her assignment files wrong extensions while downloading and now she
+cannot read them. Its last day of her assignment. Its urgent so Siri tells her 
+to ask your help. You are very helpful we know ;)
+
+There are three files written in random format namely missing1, missing2 & missing3.
+You need read these files out and complete her assignment.
+Don't worry you'll get a treat by her in the end.
+(NOTE: All other details are given in Assignment.pdf)

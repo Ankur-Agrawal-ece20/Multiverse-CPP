@@ -5,7 +5,7 @@
 
 ## Introduction
 
-In this task you will be working on a c++ file and coding it according to given task. The main motive of this task is to make you familiar with:
+In this task you will be working on a C++ file and coding it according to given task. The main motive of this task is to make you familiar with:
 
 - Git and GitHub
 - C++
