@@ -1,11 +1,12 @@
-## Welcome to
+<h2 align="center"> Welcome to </h2>
 <p align="center">
 <img alt="MULTIVERSE OF LANGUAGES" width="700px" src="images/text.png" />
 </p>
+<br>
 
-## Introduction
+# Introduction
 
-In this task you will be working on a C++ file and coding it according to given task. The main motive of this task is to make you familiar with:
+In this task you will be working on a `C++ File` and coding it according to given task. The main motive of this task is to make you familiar with:
 
 - Git and GitHub
 - C++
@@ -20,12 +21,12 @@ First of all, click on the top-right corner of this repository to fork it.
 
 ### Create a local clone of your fork
 Then, clone your forked repository using this command:
-```
-git clone https://github.com/YOUR-USERNAME/Polygot-CPP.git
+```bash
+git clone https://github.com/YOUR-USERNAME/Multiverse-CPP.git
 ```
 
 Change your current directory to the repo's root.
-```
+```bash
 cd Multiverse-CPP
 ```
 
@@ -38,7 +39,7 @@ Go through the tasks in src folder and
 </p>
 
 Then you can finally test your submission using this command.
-```
+```bash
 make
 ```
 
