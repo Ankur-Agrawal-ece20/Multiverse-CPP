@@ -10,8 +10,8 @@ Congo, you won!!!
 
 Siri is impressed by your coding skills.
 One day Siri's friend Alexa stucks into a problem while handling files. 
-She saved her assignment files wrong extensions while downloading and now she
-cannot read them. Its last day of her assignment. Its urgent so Siri tells her 
+She saved her assignment files with wrong extensions while downloading and now 
+she cannot read them. Its last day of her assignment. Its urgent so Siri tells her 
 to ask your help. You are very helpful we know ;)
 
 There are three files written in random format namely missing1, missing2 & missing3.
