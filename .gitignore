@@ -1,7 +1,9 @@
 ### folder ###
-build/
+build_1/
+build_2/
 .vscode/
 
 ### file ###
 file
-runner
+task1_runner
+task2_runner
