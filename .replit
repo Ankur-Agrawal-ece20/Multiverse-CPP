@@ -1,2 +1,2 @@
 language = "bash"
-run = "make"
+run = "read var && g++ -std=c++17 $var -o runfile && ./runfile"
