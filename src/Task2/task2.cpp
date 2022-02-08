@@ -1,9 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool custom_sort(pair<int,int> p1, pair<int,int> p2){
+    if(p1.second==p2.second){
+        return p1.first<p2.first;
+    }
+    return p1.second>p2.second;
+}
+
 class Solution {
     private:
-    int n;//=2*k
+    int n;
     vector<unsigned int>v,ans1,ans2,ans3;
     void solve_task1(){
         set<int>s;
@@ -13,12 +20,6 @@ class Solution {
         for(auto &e:s){
             ans1.push_back(e);
         }
-    }
-    bool custom_sort(pair<int,int> p1, pair<int,int> p2){
-        if(p1.second==p2.second){
-            return p1.first<p2.first;
-        }
-        return p1.second>p2.second;
     }
     void solve_task2(){
         vector<pair<int,int> > vp;
@@ -39,7 +40,6 @@ class Solution {
         solve_task2();
     }
     string FINDMATCH(string path){
-        cout<<path;
         vector<unsigned int> data;
         ifstream binaryfile;
         binaryfile.open(path, ios::in | ios::binary);
@@ -76,15 +76,15 @@ void write_to_file(string path,vector<unsigned int> &a){
 }
 
 // int main(){
-//     vector<unsigned int> testcase1{1,2,3,4,5,6};
-//     vector<unsigned int> testcase2{1,2,4,5,6};
-//     write_to_file("missing_files/testcase1.bin",testcase1);
-//     write_to_file("missing_files/testcase2.bin",testcase2);
-//     vector<unsigned int> solve{1,5,2,6,3,4,4,4,6,2,2};
-//     Solution solution1(solve.size(),solve);
-//     string path="missing_files/testcase1.bin";
-//     string ans=solution1.FINDMATCH(path);
-//     cout<<ans<<endl;
+    // vector<unsigned int> testcase1{1,2,3,4,5,6};
+    // vector<unsigned int> testcase2{1,2,4,5,6};
+    // write_to_file("missing_files/testcase1.bin",testcase1);
+    // write_to_file("missing_files/testcase2.bin",testcase2);
+    // vector<unsigned int> solve{1,5,2,6,3,4,4,4,6,2,2};
+    // Solution solution1(solve.size(),solve);
+    // string path="missing_files/testcase1.bin";
+    // string ans=solution1.FINDMATCH(path);
+    // cout<<ans<<endl;
 //     path="missing_files/testcase2.bin";
 //     ans=solution1.FINDMATCH(path);
 //     cout<<ans<<endl;
