@@ -6,7 +6,4 @@ TEST_CASE("Working on test1") {
     Solution solve(testcase.size(),testcase);
 	CHECK(solve.FINDMATCH("include/testfiles/testcase1.bin") == "TASK1");
 	CHECK(solve.FINDMATCH("include/testfiles/testcase2.bin") == "NOTFOUND");
-	// CHECK(solve(testcase3.size(), testcase3) == 35);
-	// CHECK(solve(testcase4.size(), testcase4) == 8);
-	// CHECK(solve(testcase5.size(), testcase5) == 176400);
 }

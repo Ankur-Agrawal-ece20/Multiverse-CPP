@@ -30,6 +30,18 @@ class Solution {
             ans2.push_back(e.first);
         }
     }
+    void solve_task3(){
+        queue<int> q;
+        for(int i=0; i<n; i+=2){
+            q.push(v[i+1]);
+            if(v[i] % 2 == 0)
+                q.pop();
+        }
+        while (!q.empty()) {
+            ans3.push_back(q.front());
+            q.pop();
+        }
+    }
     
     public:
     Solution(int x,vector<unsigned int> &a) {
