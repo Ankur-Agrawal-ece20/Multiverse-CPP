@@ -30,8 +30,8 @@ it contains answer of which task.
 ==> INPUT:
 An integer n denoting size of vector.
 A vector that Mr.Virus gave to her in assignment.
-An string containing file name for FINDMATCH function.
+An string is passed containing file path while calling FINDMATCH function.
 
 ==> OUTPUT:
-An string which contains task name as ( "TASK1", "TASK2" or "TASK3")
-if match found else return "NOTFOUND".
+An string which contains task name as ( "TASK1", "TASK2" or "TASK3" )
+if match found else return ( "NOTFOUND" ).
