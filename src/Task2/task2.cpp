@@ -8,6 +8,15 @@ bool custom_sort(pair<int,int> p1, pair<int,int> p2){
     return p1.second>p2.second;
 }
 
+void write_to_file(string path,vector<unsigned int> &a){
+    ofstream binaryfile;
+    binaryfile.open(path, ios::out | ios::binary);
+    for(auto &e:a){
+        binaryfile.write((char *)&e, sizeof(int));
+    }
+    binaryfile.close();
+}
+
 class Solution {
     private:
     int n;
@@ -50,6 +59,7 @@ class Solution {
         v=a;
         solve_task1();
         solve_task2();
+        solve_task3();
     }
     string FINDMATCH(string path){
         vector<unsigned int> data;
@@ -67,10 +77,10 @@ class Solution {
             return "TASK1";
         }
         else if(data==ans2){
-            return "task2";
+            return "TASK2";
         }
         else if(data==ans3){
-            return "task3";
+            return "TASK3";
         }
         else{
             return "NOTFOUND";
@@ -78,33 +88,39 @@ class Solution {
     }
 };
 
-void write_to_file(string path,vector<unsigned int> &a){
-    ofstream binaryfile;
-    binaryfile.open(path, ios::out | ios::binary);
-    for(auto &e:a){
-        binaryfile.write((char *)&e, sizeof(int));
-    }
-    binaryfile.close();
-}
+
 
 // int main(){
-    // vector<unsigned int> testcase1{1,2,3,4,5,6};
-    // vector<unsigned int> testcase2{1,2,4,5,6};
-    // write_to_file("missing_files/testcase1.bin",testcase1);
-    // write_to_file("missing_files/testcase2.bin",testcase2);
-    // vector<unsigned int> solve{1,5,2,6,3,4,4,4,6,2,2};
-    // Solution solution1(solve.size(),solve);
-    // string path="missing_files/testcase1.bin";
-    // string ans=solution1.FINDMATCH(path);
-    // cout<<ans<<endl;
-//     path="missing_files/testcase2.bin";
-//     ans=solution1.FINDMATCH(path);
-//     cout<<ans<<endl;
-//     // int n;
-//     // cin>>n;
-//     // vector<string> arr(n);
-//     // for(int i=0;i<n;i++) getline(cin,arr[i]);
-//     // cout<<solve(n,arr);
+//     vector<unsigned int> testcase1;
+//     vector<unsigned int> testcase2;
+//     vector<unsigned int> solve;
+//     for(int i=0;i<77;i++){
+//         solve.push_back(random()%1000);
+//         cout<<solve.back()<<", ";
+//         if(i%2==0){
+//             testcase1.push_back(solve.back());
+//         }
+//         else{
+//             testcase2.push_back(solve.back());
+//         }
+//     }
+//     cout<<endl;
+//     // write_to_file("missing_files/testcase5.bin",testcase1);
+//     // write_to_file("missing_files/testcase4.bin",testcase2);
+//     Solution solution1(solve.size(),solve);
+//     // string path="missing_files/testcase1.bin";
+//     // string ans=solution1.FINDMATCH(path);
+//     // cout<<ans<<endl;
+//     for(int i=0;i<5;i++){
+//         string path="missing_files/testcase"+to_string(i+1)+".bin";
+//         string ans=solution1.FINDMATCH(path);
+//         cout<<ans<<endl;
+//     }
+// //     // int n;
+// //     // cin>>n;
+// //     // vector<string> arr(n);
+// //     // for(int i=0;i<n;i++) getline(cin,arr[i]);
+// //     // cout<<solve(n,arr);
 //     return 0;
 // }
 
