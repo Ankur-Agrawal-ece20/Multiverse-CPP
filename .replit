@@ -1,2 +1,5 @@
 language = "bash"
-run = "read var && g++ -std=c++17 $var -o runfile && ./runfile"
+run = """
+path=learn/class.cpp
+g++ -std=c++17 $path -o runfile && ./runfile
+"""
