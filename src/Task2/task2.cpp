@@ -1,27 +1,66 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define int unsigned int
+#define pb push_back
 
+bool sortbysec(const pair<int,int> &a,const pair<int,int> &b)
+{
+    if (a.second==b.second)
+    {
+        return(a.first<b.first);
+    }
+    return (a.second > b.second);
+}
 
 class Solution {
     private:
     int n; // n is size that user inputs
     vector<unsigned int>v,ans1,ans2,ans3; // v is the vector that user inputs
-    void solve_task1(){
+   
+    void solve_task1()
+    {
         // solve task1 and save the answer in ans1
+        set<int>s;
+        for (int i = 0; i < n; i++)
+        {
+            s.insert(v[i]);
+        }
+        for (int i = 0; i < s.size(); i++)
+        {
+            ans1.pb(s[i]);
+        }        
     }
-    void solve_task2(){
+
+    void solve_task2()
+    {
         // solve task2 and save the answer in ans2
+        vector<pair<int,int>>t;
+        for (int i = 0; i < n-1; i=i+2)
+        {
+            int x=v[i];
+            int y=v[i+1];
+            t.pb({x,y});
+        }
+        sort(t.begin(), t.end(), sortbysec);
+        for (int i = 0; i <t.size() ; i++)
+        {
+            ans2.pb(t[i].first);
+        }
+
     }
-    void solve_task3(){
+    void solve_task3()
+    {
         // solve task3 and save the answer in ans3
     }
     
     public:
     // create a constructor to take input
 
-    string FINDMATCH(string path){
+    string FINDMATCH(string path)
+    {
         // complete this function to read file, compare with ans1, ans2, ans3
         // and return the answer
+        
     }
 };
 
