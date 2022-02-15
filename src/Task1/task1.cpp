@@ -65,17 +65,17 @@ int solve(int n, vector<string> arr){
     return answer;
 }
 
-int main(){
-    int n;
-    cin>>n;
-    cin.ignore();
-    vector<string> arr(n);
-    for(int i=0;i<n;i++){
-        getline(cin,arr[i]);
-    }
-    cout<<solve(n,arr);
-    return 0;
-}
+// int main(){
+//     int n;
+//     cin>>n;
+//     cin.ignore();
+//     vector<string> arr(n);
+//     for(int i=0;i<n;i++){
+//         getline(cin,arr[i]);
+//     }
+//     cout<<solve(n,arr);
+//     return 0;
+// }
 
 // ==> NOTE: Comment main function and uncomment below line to verify your code 
-// #include "../../include/test1_cases.h"
+#include "../../include/test1_cases.h"
