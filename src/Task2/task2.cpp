@@ -97,8 +97,21 @@ class Solution {
     {
         // complete this function to read file, compare with ans1, ans2, ans3
         // and return the answer
-        
+        ifstream binaryfile;
+        binaryfile.open(path,ios::in | ios::binary);
+        binaryfile.seekg(0, ios::end);
+        int length = binaryfile.tellg();
+        binaryfile.seekg(0, ios::beg);
+
         vector<int> answer;
+
+        while(binaryfile.tellg() != length)
+        {
+            int x;
+            binaryfile.read((char *)&x,sizeof(int));
+            answer.pb(x);
+        }
+
         if (ans1==answer) 
         {
             return "TASK1";
