@@ -16,20 +16,21 @@ bool sortbysec(const pair<int,int> &a,const pair<int,int> &b)
 class Solution {
     private:
     int n; // n is size that user inputs
-    vector<unsigned int>v,ans1,ans2,ans3; // v is the vector that user inputs
+    vector<int>v,ans1,ans2,ans3; // v is the vector that user inputs
    
     void solve_task1()
     {
         // solve task1 and save the answer in ans1
-        set<int>s;
-        for (int i = 0; i < n; i++)
+    set<int>s;
+    for (int i = 0; i < n; i++)
         {
             s.insert(v[i]);
         }
-        for (int i = 0; i < s.size(); i++)
-        {
-            ans1.pb(s[i]);
-        }        
+    set<int >::iterator it ;
+    for (it = s.begin() ; it != s.end() ; it++ ) 
+    {
+        ans1.pb(*it);
+    }   
     }
 
     void solve_task2()
@@ -52,7 +53,7 @@ class Solution {
     void solve_task3()
     {
         // solve task3 and save the answer in ans3
-          vector<pair<int,int>>t;
+        vector<pair<int,int>>t;
         for (int i = 0; i < n-1; i=i+2)
         {
             int x=v[i];
@@ -96,6 +97,23 @@ class Solution {
     {
         // complete this function to read file, compare with ans1, ans2, ans3
         // and return the answer
+        
+        vector<int> answer;
+        if (ans1==answer) 
+        {
+            return "TASK1";
+        }
+        else if (ans2==answer) 
+        {
+            return "TASK2";
+        }
+        else if (ans3==answer) {
+            return "TASK3";
+        }
+        else
+        {
+             return "NOTFOUND";
+        }
 };
 
 
@@ -112,8 +130,8 @@ class Solution {
 
     // Make a for loop to go through paths array and call FINDMATCH function
 
-    return 0;
-}
+    // return 0;
+// }
 
 // ==> NOTE: Comment main function and uncomment below line to verify your code 
 #include "../../include/test2_cases.h"
