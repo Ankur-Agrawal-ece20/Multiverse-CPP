@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int unsigned int
+// #define int unsigned int
 #define pb push_back
-
-bool sortbysec(const pair<int,int> &a,const pair<int,int> &b)
+  bool sortbysec(const pair<int,int> &a,const pair<int,int> &b)
 {
     if (a.second==b.second)
     {
@@ -12,11 +11,10 @@ bool sortbysec(const pair<int,int> &a,const pair<int,int> &b)
     else
     return (a.second > b.second);
 }
-
 class Solution {
     private:
     int n; // n is size that user inputs
-    vector<int>v,ans1,ans2,ans3; // v is the vector that user inputs
+    vector<unsigned int>v,ans1,ans2,ans3; // v is the vector that user inputs
    
     void solve_task1()
     {
@@ -32,6 +30,8 @@ class Solution {
         ans1.pb(*it);
     }   
     }
+
+  
 
     void solve_task2()
     {
@@ -84,7 +84,7 @@ class Solution {
     
     public:
     // create a constructor to take input
-        Solution(int size, vector<int>vect)
+        Solution(int size, vector<unsigned int>vect)
     {
         n = size;
         v = vect;
@@ -98,12 +98,17 @@ class Solution {
         // complete this function to read file, compare with ans1, ans2, ans3
         // and return the answer
         ifstream binaryfile;
-        binaryfile.open(path,ios::in | ios::binary);
+        binaryfile.open(path,ios::binary);
+
+         if (!binaryfile.is_open()){
+            cout<<"The file can't be opened.\n";
+            return "ERROR";
+        }
         binaryfile.seekg(0, ios::end);
         int length = binaryfile.tellg();
         binaryfile.seekg(0, ios::beg);
 
-        vector<int> answer;
+        vector<unsigned int> answer;
 
         while(binaryfile.tellg() != length)
         {
@@ -120,14 +125,16 @@ class Solution {
         {
             return "TASK2";
         }
-        else if (ans3==answer) {
+        else if (ans3==answer) 
+        {
             return "TASK3";
         }
         else
         {
              return "NOTFOUND";
         }
-    }};
+    }
+};
 
 
 
