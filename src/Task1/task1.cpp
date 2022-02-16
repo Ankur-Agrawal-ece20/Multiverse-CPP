@@ -1,55 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int solve(int n, vector<string> arr){
-    int answer=0;
-    // Start your code here
-    for (int i = 0; i < n; i++)
-    {
-        string str1;
-        for (int j = 0; j < arr[i].size(); j++)
-        {
-            if(arr[i][j] ==',')
-            {
-                break;
-            }
-            else{
-              str1=str1+arr[i][j];
-            }
-        }
-        arr[i]=str1;
-    }
-
-    for(int i=0;i<n;i++)
-    {
-        stringstream ss;
-        string stri=arr1[i];
-        ss<<stri;
-        ss>>stri;
-        string oper=stri;
-        ss>>stri;
-        string var1=stri;
-        ss>>stri;
-        string var2=stri;
-        ss>>stri;
-        string var3=stri;
-        operation(oper,var1,var2,var3);      
-    }
-    // End your code here
-    return answer;
-}
-
-string oper;
-string var1;
-string var2;
-string var3;
-
-//void changed(string l1)
-//{
-  //int n;
-//  n=stoi(l1);
-//}
-
 map<string,int>map1;
 
 void operation(string oper,string var1,string var2,string var3)
@@ -111,6 +61,56 @@ void operation(string oper,string var1,string var2,string var3)
       cout<<"not identified";
     }
 }
+
+
+int solve(int n, vector<string> arr){
+    int answer=0;
+    // Start your code here
+    for (int i = 0; i < n; i++)
+    {
+        string str1;
+        for (int j = 0; j < arr[i].size(); j++)
+        {
+            if(arr[i][j] ==',')
+            {
+                break;
+            }
+            else{
+              str1=str1+arr[i][j];
+            }
+        }
+        arr[i]=str1;
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        stringstream ss;
+        string stri=arr[i];
+        ss<<stri;
+        ss>>stri;
+        string oper=stri;
+        ss>>stri;
+        string var1=stri;
+        ss>>stri;
+        string var2=stri;
+        ss>>stri;
+        string var3=stri;
+        operation(oper,var1,var2,var3);      
+    }
+    // End your code here
+    return answer;
+}
+
+string oper;
+string var1;
+string var2;
+string var3;
+
+//void changed(string l1)
+//{
+  //int n;
+//  n=stoi(l1);
+//}
 
 
 
