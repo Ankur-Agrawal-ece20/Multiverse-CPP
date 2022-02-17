@@ -21,115 +21,118 @@ private:
             ans1.pb(*sort);
         }
     }
-    bool sortbyfirst(const pair<int,int> &a,const pair<int,int> &b)
-{
-    if (a.second==b.second)
+    bool sortbyfirst(const pair<int, int> &a, const pair<int, int> &b)
     {
-        return(a.first<b.first);
+        if (a.second == b.second)
+        {
+            return (a.first < b.first);
+        }
+        else
+            return (a.second > b.second);
     }
-    else
-    return (a.second > b.second);
-}
+
     void solve_task2()
     {
         // solve task2 and save the answer in ans2
-        vector<pair<int,int>>req;
-        for (int i = 0; i < n-1; i=i+2)
+        vector<pair<int, int>> req;
+        for (int i = 0; i < n - 1; i = i + 2)
         {
-            int one=v[i];
-            int two=v[i+1];
-            req.pb({one,two});
-        
-        sort(req.begin(), req.end(), sortbyfirst);
-        for (int i = 0; i <req.size() ; i++)
-        {
-            ans2.pb(req[i].first);
+            int one = v[i];
+            int two = v[i + 1];
+            req.pb({one, two});
+
+            sort(req.begin(), req.end(), sortbyfirst);
+            for (int i = 0; i < req.size(); i++)
+            {
+                ans2.pb(req[i].first);
+            }
         }
     }
-    void solve_task3()
-    {
-        // solve task3 and save the answer in ans3
-        vector<pair<int,int>>t;
-        for (int i = 0; i < n-1; i=i+2)
+        void solve_task3()
         {
-            int one=v[i];
-            int two=v[i+1];
-            t.pb({one,two});
-        }
-        queue<int>que;
-        for (int i = 0; i < req.size(); i++)
-        {
-            if(req[i].first%2 !=0)
+            // solve task3 and save the answer in ans3
+            vector<pair<int, int>> t;
+            for (int i = 0; i < n - 1; i = i + 2)
             {
-                que.push(req[i].second);
+                int one = v[i];
+                int two = v[i + 1];
+                t.pb({one, two});
             }
-            else
+            queue<int> que;
+            for (int i = 0; i < req.size(); i++)
             {
-                que.push(req[i].second);
+                if (req[i].first % 2 != 0)
+                {
+                    que.push(req[i].second);
+                }
+                else
+                {
+                    que.push(req[i].second);
+                    que.pop();
+                }
+            }
+
+            while (!que.empty())
+            {
+                int one = que.front();
+                ans3.pb(one);
                 que.pop();
             }
         }
 
-        while(!que.empty())
+    public:
+        // create a constructor to take input
+        void solution(int size, vector<int> a)
         {
-            int one=que.front();
-            ans3.pb(one);
-            que.pop();
-        }        
-    }
-
-public:
-    // create a constructor to take input
-    void solution(int size,vector<int> a)
-    {
-        n=size;
-        a = v;
-        solve_task1();
-        solve_task2();
-        solve_task3();
-    }
-
-    string FINDMATCH(string path)
-    {
-        // complete this function to read file, compare with ans1, ans2, ans3
-        // and return the answer
-        ifstream binaryfile;
-        binaryfile.open(path,ios::binary);
-
-         if (!binaryfile.is_open()){
-            cout<<"The file can't be opened.\n";
-            return "ERROR";
-        }
-        binaryfile.seekg(0, ios::end);
-        int length = binaryfile.tellg();
-        binaryfile.seekg(0, ios::beg);
-
-        vector<int> answer;
-
-        while(binaryfile.tellg() != length)
-        {
-            int x;
-            binaryfile.read((char *)&x,sizeof(int));
-            answer.pb(x);
+            n = size;
+            a = v;
+            solve_task1();
+            solve_task2();
+            solve_task3();
         }
 
-        if (ans1==answer) 
+        string FINDMATCH(string path)
         {
-            return "TASK1";
+            // complete this function to read file, compare with ans1, ans2, ans3
+            // and return the answer
+            ifstream binaryfile;
+            binaryfile.open(path, ios::binary);
+
+            if (!binaryfile.is_open())
+            {
+                cout << "The file can't be opened.\n";
+                return "ERROR";
+            }
+            binaryfile.seekg(0, ios::end);
+            int length = binaryfile.tellg();
+            binaryfile.seekg(0, ios::beg);
+
+            vector<int> answer;
+
+            while (binaryfile.tellg() != length)
+            {
+                int x;
+                binaryfile.read((char *)&x, sizeof(int));
+                answer.pb(x);
+            }
+
+            if (ans1 == answer)
+            {
+                return "TASK1";
+            }
+            else if (ans2 == answer)
+            {
+                return "TASK2";
+            }
+            else if (ans3 == answer)
+            {
+                return "TASK3";
+            }
+            else
+            {
+                return "NOTFOUND";
+            }
         }
-        else if (ans2==answer) 
-        {
-            return "TASK2";
-        }
-        else if (ans3==answer) 
-        {
-            return "TASK3";
-        }
-        else
-        {
-             return "NOTFOUND";
-        }
-    }
 };
 
 // int main()
