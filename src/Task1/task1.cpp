@@ -3,35 +3,35 @@ using namespace std;
 
 map<string,int>val;
 
-void for_simplifying(string operation,string 1,string 2,string 3)
+void for_simplifying(string operation,string p,string q,string r)
 {
     if(operation=="add")
     {
-        val[1]=val[2]+val[3];
+        val[p]=val[q]+val[r];
 
     }
     else if(operation=="li")
     {
-    stringstream string_to_num(2);
+    stringstream string_to_num(q);
 
 
         int num=0;
 	string_to_num>>num;
 
-        val[1]=num;
+        val[p]=num;
 
     }
     else if(operation=="sub")
     {
-        val[1]=val[2]-val[3];
+        val[p]=val[q]-val[r];
     }
     else if(operation=="mul")
     {
-        val[1]=val[2]*val[3];
+        val[p]=val[q]*val[r];
     }
     else if(operation=="addi")
     {
-    stringstream string_to_num(3);
+    stringstream string_to_num(r);
 
 
 int num=0;
@@ -39,37 +39,37 @@ int num=0;
 
 
 
-     val[1]=val[2]+num;
+     val[p]=val[q]+num;
     }
      else if(operation=="and")
     {
-         val[1]=val[2]&val[3];
+         val[p]=val[q]&val[r];
     }
      else if(operation=="or")
     {
-          val[1]=val[2]|val[3];
+          val[p]=val[q]|val[r];
     }
      else if(operation=="andi")
     {
-    stringstream string_to_num(3);
+    stringstream string_to_num(r);
 	int num=0;
 	string_to_num>>num;
 
 
-     val[1]=val[2]&num;
+     val[p]=val[q]&num;
     }
      else if(operation=="ori")
      {
-    stringstream string_to_num(3);
+    stringstream string_to_num(r);
 	int num=0;
 	string_to_num>>num;
 
 
-     val[1]=val[2]|num;
+     val[p]=val[q]|num;
      }
     else if(operation=="sw")
     {
-        val["answer"]=val[1];
+        val["answer"]=val[p];
     }
 }
 
@@ -99,12 +99,12 @@ s+=arr[i][j];
         ss>>str;
         string operation=str;
         ss>>str;
-        string 1=str;
+        string p=str;
         ss>>str;
-        string 2=str;
+        string q=str;
         ss>>str;
-        string 3=str;
-        for_simplifying(operation,1,2,3);
+        string r=str;
+        for_simplifying(operation,p,q,r);
     }
     answer = val["answer"];
     // End your code here
@@ -124,5 +124,5 @@ s+=arr[i][j];
 //     return 0;
 // }
 
-// ==> NOTE: Comment main function and uncomment below line to verif2 2our code
+// ==> NOTE: Comment main function and uncomment below line to verifq qour code
 #include "../../include/test1_cases.h"
