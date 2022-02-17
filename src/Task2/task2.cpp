@@ -22,29 +22,40 @@ class Solution {
 
         void solve_task2() {
             // solve task2 and save the answer in ans2
-            std::vector<unsigned int> v_temp = this->v;
+            std::vector<unsigned int> v_temp = v;
             std::vector<std::vector<unsigned int>> container;
 
             // Group the vector's elements into groups of two
-            for (int i{}; i < std::size(v_temp); i += 2) {            // std::size needs C++17
+            for (int i{}; i < std::size(v_temp); i += 2) {
                 std::vector<unsigned int> temp = {v_temp[i], v_temp[i+1]};
                 container.push_back(temp);
             }
 
-            // Store the second elements in an array of their own, sort them, then use a map for referencing group
-            std::map<unsigned int, std::vector<unsigned int>> el_map;
-            std::vector<unsigned int> seconds;
+            // Sort the array
+            for (int i = 0; i < std::size(container); ++i) {
+                int max = container[i][1];
 
-            // Mapping the second elements to the ref of their groups
-            for (std::vector<unsigned int>& val : container) {
-                seconds.push_back(val[1]);
-                el_map[val[1]] = val;
+                // Iterate through the elements as many times as there are pairs
+                for (int j = i + 1; j < std::size(container); ++j) {
+                    if (container[j][1] > max) {
+                        max = container[j][1];
+                        auto temp = container[i];
+                        container[i] = container[j];
+                        container[j] = temp;
+                    }
+                    else if (container[j][1] == max) {
+                        if (container[i][0] > container[j][0]) {
+                        //    max = container[j][1];
+                        auto temp = container[i];
+                        container[i] = container[j];
+                        container[j] = temp;
+                        }
+                    }
+                }    
             }
 
-            // Sort the seconds and then use the map to access the first members
-            std::sort(seconds.begin(), seconds.end(), greater<>());
-            for (auto& val : seconds) {
-                this->ans2.push_back(el_map[val][0]);
+            for (const auto& val : container) {
+                this->ans2.push_back(val[0]);
             }
         }
         void solve_task3() {
