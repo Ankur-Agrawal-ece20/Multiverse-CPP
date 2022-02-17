@@ -61,7 +61,7 @@ class Solution {
         // complete this function to read file, compare with ans1, ans2, ans3
         // and return the answer
 
-        path = "../../"+path;
+        //path = "../../"+path;
         ifstream file;
         file.open(path, ios::binary);
 
