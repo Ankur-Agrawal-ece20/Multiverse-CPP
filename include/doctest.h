@@ -156,7 +156,7 @@
     DOCTEST_CLANG_SUPPRESS_WARNING("-Wunused-local-typedef")                                       \
     DOCTEST_CLANG_SUPPRESS_WARNING("-Wc++98-compat")                                               \
     DOCTEST_CLANG_SUPPRESS_WARNING("-Wc++98-compat-pedantic")                                      \
-                                                                                                   \
+                                                                                                    \
     DOCTEST_GCC_SUPPRESS_WARNING_PUSH                                                              \
     DOCTEST_GCC_SUPPRESS_WARNING("-Wunknown-pragmas")                                              \
     DOCTEST_GCC_SUPPRESS_WARNING("-Wpragmas")                                                      \
@@ -167,7 +167,7 @@
     DOCTEST_GCC_SUPPRESS_WARNING("-Wunused-local-typedefs")                                        \
     DOCTEST_GCC_SUPPRESS_WARNING("-Wuseless-cast")                                                 \
     DOCTEST_GCC_SUPPRESS_WARNING("-Wnoexcept")                                                     \
-                                                                                                   \
+                                                                                                    \
     DOCTEST_MSVC_SUPPRESS_WARNING_PUSH                                                             \
     /* these 4 also disabled globally via cmake: */                                                \
     DOCTEST_MSVC_SUPPRESS_WARNING(4514) /* unreferenced inline function has been removed */        \
