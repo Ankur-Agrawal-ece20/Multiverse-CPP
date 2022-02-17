@@ -92,6 +92,7 @@ class Solution {
             binaryFile.read((char*)&x, sizeof(int));
             bfile.push_back((int)x);
         }
+        binaryFile.close();
         cout<<endl;
         string str;
         if(ans1==v){
