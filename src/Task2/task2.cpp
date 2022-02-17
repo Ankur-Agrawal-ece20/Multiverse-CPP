@@ -102,31 +102,34 @@ class Solution {
     string FINDMATCH(string path) {
         // complete this function to read file, compare with ans1, ans2, ans3
         // and return the answer
-        ifstream file;
-        file.open(path, ios::binary);
+        fstream file;
+        std::vector<unsigned int> v;    
 
-        if (!file.is_open()){
-            cout<<"The file can't be opened.\n";
-            return "ERROR";
+        file.open(path, std::ios::binary | std::ios::in);
+
+        file.seekg(0, std::ios::end);
+        int length = file.tellg();
+        file.seekg(0, std::ios::beg);
+
+        while(file.tellg() != length) {
+            int val;
+            file.read((char*)&val, sizeof(int));
+            v.push_back(val);
+            val = 0;
         }
 
-        file.seekg(0, ios::end);
-        int file_size = file.tellg();
-        file.seekg(0, ios::beg);
-
-        unsigned int read_data;
-        int size_int = sizeof(int);
-        vector<unsigned int> answer;
-
-        while(file.tellg() != file_size){
-            file.read((char *) &read_data, size_int);
-            answer.push_back(read_data);
+        if (v == ans1) {
+            return "TASK1";
         }
-
-        if (ans1==answer) return "TASK1";
-        else if (ans2==answer) return "TASK2";
-        else if (ans3==answer) return "TASK3";
-        else return "NOTFOUND";
+        else if (v == ans2) {
+            return "TASK2";
+        }
+        else if (v == ans3) {
+            return "TASK3";
+        }
+        else {
+            return "NOTFOUND";
+        }
 
     }
 };
