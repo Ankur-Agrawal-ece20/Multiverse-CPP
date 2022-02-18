@@ -65,10 +65,6 @@ int solve(int n, vector<string> arr){
         }
 
     }
-
-    // Start your code here
-
-    // End your code here
     return answer;
 }
 

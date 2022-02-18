@@ -63,7 +63,7 @@ class Solution {
     // create a constructor to take input
     string FINDMATCH(string path){
         
-        path = "../../"+path;
+        
         ifstream file;
         file.open(path, ios::binary);
 
