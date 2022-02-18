@@ -1,5 +1,5 @@
 language = "bash"
 run = """
-path=learn/class.cpp
+path=src/Task2/task2.cpp
 g++ -std=c++17 $path -o runfile && ./runfile
 """
