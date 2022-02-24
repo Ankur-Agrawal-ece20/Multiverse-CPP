@@ -10,7 +10,7 @@ private:
     void solve_task1()
     {
         // solve task1 and save the answer in ans1
-        set<int> unique;
+        set<int>unique;
         for (int i = 0; i < n; i++)
         {
             unique.insert(v[i]);
@@ -23,12 +23,17 @@ private:
     }
     bool sortbyfirst(const pair<int, int> &a, const pair<int, int> &b)
     {
-        if (a.second == b.second)
+        if (a.second > b.second)
+            return false;
+        else if (a.second == b.second)
         {
-            return (a.first < b.first);
+            if (a.first > b.first)
+                return true;
+            else
+                return false;
         }
         else
-            return (a.second > b.second);
+            return true
     }
 
     void solve_task2()
@@ -51,12 +56,12 @@ private:
         void solve_task3()
         {
             // solve task3 and save the answer in ans3
-            vector<pair<int, int>> t;
+            vector<pair<int, int>> req;
             for (int i = 0; i < n - 1; i = i + 2)
             {
                 int one = v[i];
                 int two = v[i + 1];
-                t.pb({one, two});
+                req.pb({one, two});
             }
             queue<int> que;
             for (int i = 0; i < req.size(); i++)
@@ -82,10 +87,10 @@ private:
 
     public:
         // create a constructor to take input
-        void solution(int size, vector<int> a)
+         solution(int size, vector<unsigned int> a)
         {
             n = size;
-            a = v;
+            v = a;
             solve_task1();
             solve_task2();
             solve_task3();
@@ -107,7 +112,7 @@ private:
             int length = binaryfile.tellg();
             binaryfile.seekg(0, ios::beg);
 
-            vector<int> answer;
+            vector<unsigned int> answer;
 
             while (binaryfile.tellg() != length)
             {
